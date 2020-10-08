@@ -46,6 +46,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " to highlight files in nerdtree
 Plug 'ryanoasis/vim-devicons' " icon for vim
 Plug 'glench/vim-jinja2-syntax' " styling jinja2 syntax
 " post install (yarn install | npm install) then load plugin only for editing supported files
+" NOTE: run sudo npm i -g prettier in command mode after installing vim-prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }

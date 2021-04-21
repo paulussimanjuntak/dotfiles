@@ -46,7 +46,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " to highlight files in nerdtree
 Plug 'ryanoasis/vim-devicons' " icon for vim
 Plug 'glench/vim-jinja2-syntax' " styling jinja2 syntax
 " post install (yarn install | npm install) then load plugin only for editing supported files
-" NOTE: run sudo npm i -g prettier in command mode after installing vim-prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -96,6 +95,9 @@ hi Normal guibg=NONE ctermbg=NONE
 highlight VertSplit ctermfg=NONE
 highlight VertSplit ctermbg=NONE
 
+" change color relative number background
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 " init setting for hail2u/vim-css3-syntax
 augroup VimCSS3Syntax
   autocmd!
@@ -112,8 +114,8 @@ nmap <Leader>l :GFiles<cr>
 nmap <Leader>; :Files<cr>
 nmap <Leader>< :wincmd h<cr>
 nmap <Leader>> :wincmd l<cr>
-nmap <Leader>j :wincmd j<cr>
-nmap <Leader>k :wincmd k<cr>
+nmap <Leader>, :wincmd j<cr>
+nmap <Leader>. :wincmd k<cr>
 
 " coc.nvim options
 let g:coc_disable_startup_warning = 1
@@ -216,10 +218,17 @@ vnoremap > >gv
 " Remap Esc for touchbar problem
 vnoremap qw <C-C>
 vnoremap QW <C-C>
+vnoremap Qw <C-C>
 inoremap jk <ESC>
 cnoremap jk <C-C>
+inoremap jj <ESC>
+cnoremap jj <C-C>
 inoremap JK <ESC>
 cnoremap JK <C-C>
+" inoremap kj <ESC>
+" cnoremap kj <C-C>
+" inoremap KJ <ESC>
+" cnoremap KJ <C-C>
 
 " disable all mouse wheel
 nmap <ScrollWheelUp> <nop>
@@ -281,3 +290,6 @@ nnoremap <PageDown> <Nop>
 
 vnoremap <PageUp> <Nop>
 vnoremap <PageDown> <Nop>
+
+" set vim to run nvim
+" alias vim="nvim"

@@ -1,0 +1,11 @@
+[alias]
+	co = checkout
+	br = branch
+	cm = commit -m
+	st = status
+	ps = push
+	pl = pull
+	cl = clone
+[user]
+	name = paulussimanjuntak\n
+	email = paulusbsimanjuntak@gmail.com
